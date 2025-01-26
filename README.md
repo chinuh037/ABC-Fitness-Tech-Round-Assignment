@@ -38,12 +38,14 @@ The solution is built using C# and follows RESTful API principles.
     "duration": "1 hour",
     "capacity": 10
 }
+```
 
 #### Response:
 ```json
 {
     "message": "Class 'Pilates' has been created successfully."
 }
+```
 
 ### **2. Create a Booking**
 - **Endpoint**: `POST /api/booking/create`
@@ -56,18 +58,21 @@ The solution is built using C# and follows RESTful API principles.
     "className": "Pilates",
     "participationDate": "2025-12-05"
 }
+```
 
 #### Response:
 ```json
 {
     "message": "Booking successful for 'Pilates' on 2025-12-05."
 }
+```
 
 #### Error Response (If the class is at capacity):
 ```json
 {
     "error": "Booking failed. Class 'Pilates' has reached its capacity."
 }
+```
 
 ### **3. Search Bookings**
 - **Endpoint**: `POST /api/booking/search`
@@ -81,7 +86,7 @@ The solution is built using C# and follows RESTful API principles.
 #### Example Request:
 ```bash
 GET /api/bookings?member=John Doe&startDate=2025-12-01&endDate=2025-12-20
-
+```
 
 #### Responses:
 ```json
@@ -93,3 +98,4 @@ GET /api/bookings?member=John Doe&startDate=2025-12-01&endDate=2025-12-20
         "member": "John Doe"
     }
 ]
+```
