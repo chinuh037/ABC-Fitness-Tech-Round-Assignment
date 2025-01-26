@@ -8,8 +8,6 @@ This repository contains the API solution for managing fitness club class bookin
    - [Create a Class](#create-a-class)
    - [Create a Booking](#create-a-booking)
    - [Search Bookings](#search-bookings)
-3. [Setup and Usage](#setup-and-usage)
-4. [Testing APIs](#testing-apis)
 
 ## Overview
 The system allows fitness club owners and members to interact with the following functionalities:
