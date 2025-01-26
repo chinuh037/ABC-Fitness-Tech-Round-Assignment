@@ -16,7 +16,8 @@ namespace FitnessClasses.Controllers
             _bookingService = bookingService;
         }
 
-        [HttpPost("create")]
+        [HttpPost]
+        [Route(("create"))]
         public IActionResult CreateBooking(string memberName, string className, DateTime participationDate)
         {
             try
@@ -30,7 +31,8 @@ namespace FitnessClasses.Controllers
             }
         }
 
-        [HttpGet("search")]
+        [HttpGet]
+        [Route("search")]
         public IActionResult SearchBookings(string? memberName = null, DateTime? startDate = null, DateTime? endDate = null)
         {
             var bookings = _bookingService.SearchBookings(memberName, startDate, endDate);

@@ -5,28 +5,28 @@ using Microsoft.AspNetCore.Mvc;
 namespace FitnessClasses.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/classes")]
     public class ClassController : ControllerBase
     {
-        private readonly IClassService classService;
+        private readonly IClassService _classService;
 
         public ClassController(IClassService classService)
         {
-            this.classService = classService;
+            _classService = classService;
         }
 
         [HttpPost]
         [Route("create")]
         public Class CreateClass(string name, DateTime startDate, DateTime endDate, TimeSpan startTime, int duration, int capacity)
         {
-            return classService.CreateClass(name, startDate, endDate, startTime, duration, capacity);
+            return _classService.CreateClass(name, startDate, endDate, startTime, duration, capacity);
         }
 
         [HttpGet]
         [Route("all")]
         public List<Class> GetAllClasses()
         {
-            return classService.GetAllClasses();
+            return _classService.GetAllClasses();
         }
     }
 }
